@@ -1,0 +1,48 @@
+body {
+    background-color: lightblue;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 50px;
+    border-radius: 30px;
+}
+
+button:hover {
+    cursor: help;
+    background-color: black;
+}
+
+#cardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* standard playing cards are 2.5w / 3.5h */
+.card {
+    width: 250px;
+    height: 350px;
+    border: 2px, black, solid;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: opacity 1s ease-in-out; 
+}
+
+.card img.fade-out {
+    opacity: 0;
+  }
