@@ -46,3 +46,18 @@ button:hover {
 .card img.fade-out {
     opacity: 0;
   }
+
+  @media (max-width: 768px) {
+    #cardContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+  
+    body {
+      padding: 15px;
+    }
+  
+
+  }
