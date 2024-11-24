@@ -31,7 +31,7 @@
       oscillator.stop(startTime + duration); // Stop after the duration
       
       // Optional: fade out the note by decreasing the volume over time
-      gainNode.gain.exponentialRampToValueAtTime(0.001, startTime + duration - 0.05);
+      gainNode.gain.exponentialRampToValueAtTime(0.00001, startTime + duration - 0.05);
     }
 
     // Convert MIDI note number to frequency in Hz
