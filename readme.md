@@ -141,13 +141,13 @@ incompletion, no closure
 
 in C Major:
 
-I - C E G
-ii - D F A
-iii - E G B
-IV - F A C
-V - G B D
-vi - A C E
-vii - B D F
+I - C E G C
+ii - D F A D
+iii - E G B E
+IV - F A C F
+V - G B D G
+vi - A C E A
+vii - B D F B
 
 
 4 note chords 495 total combinations
