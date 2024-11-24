@@ -24,7 +24,7 @@
       gainNode.connect(audioContext.destination);
       
       // Set up the gain (volume control)
-      gainNode.gain.setValueAtTime(0.5, startTime); // Set volume (0 to 1)
+      gainNode.gain.setValueAtTime(0.01, startTime); // Set volume (0 to 1)
       
       // Start and stop the oscillator
       oscillator.start(startTime);
