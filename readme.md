@@ -139,9 +139,20 @@ incompletion, no closure
 
 22 cards, 2 inversions each, 44 total
 
+in C Major:
+
+I - C E G
+ii - D F A
+iii - E G B
+IV - F A C
+V - G B D
+vi - A C E
+vii - B D F
+
+
 4 note chords 495 total combinations
 
-tonic chords
+
 
 
 chart from 1800s - lists each key as having a type of energy
