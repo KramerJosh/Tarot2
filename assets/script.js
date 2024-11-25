@@ -1,7 +1,4 @@
-// Define the chord (C major: C, E, G)
-
-// const chordNotes = [60, 64, 67]; // MIDI notes for C, E, G
-const duration = 5; // Duration in seconds
+const duration = 5; // Duration of chords in seconds
 
 // Create the Web Audio API context
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -58,9 +55,9 @@ document.querySelector("body").addEventListener("click", playChord);
 // ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 const cardDisplayEl = document.getElementById("cardDisplay");
-const cardImage1El = document.getElementById("cardImage1");
-const cardImage2El = document.getElementById("cardImage2");
-const cardImage3El = document.getElementById("cardImage3");
+const cardImage1El = document.getElementById("cardImage0");
+const cardImage2El = document.getElementById("cardImage1");
+const cardImage3El = document.getElementById("cardImage2");
 
 const button1El = document.getElementById("button1");
 
@@ -217,62 +214,25 @@ const coinFlip = () => {
 const displayCard = (drawNum) => {
   playChord(drawNum);
   isUpright = coinFlip();
-
-  if (drawNum === 0) {
-    cardImage1El.classList.add("fade-out");
+  var cardImageX = document.getElementById(`cardImage${drawNum}`)
+ 
+    cardImageX.classList.add("fade-out");
     setTimeout(function () {
         console.log(isUpright);
     if (isUpright === "reversed") {
-        cardImage1El.classList.add('reversed');
+        cardImageX.classList.add('reversed');
     }
     else if (isUpright === "upright") {
-        cardImage1El.classList.remove('reversed');
+        cardImageX.classList.remove('reversed');
     }
-      cardImage1El.src = Deck[0].cardImage;
-      cardImage1El.classList.remove("fade-out");
-      cardImage1El.style.opacity = 0;
+    cardImageX.src = Deck[drawNum].cardImage;
+    cardImageX.classList.remove("fade-out");
+      cardImageX.style.opacity = 0;
       setTimeout(function () {
-        cardImage1El.style.opacity = 1;
+        cardImageX.style.opacity = 1;
       }, 10);
     }, 1000);
-  } else if (drawNum === 1) {
-    isUpright = coinFlip();
-    cardImage2El.classList.add("fade-out");
-    setTimeout(function () {
-        console.log(isUpright);
-        if (isUpright === "reversed") {
-            cardImage2El.classList.add('reversed');
-        }
-        else if (isUpright === "upright") {
-            cardImage2El.classList.remove('reversed');
-        }
-      cardImage2El.src = Deck[1].cardImage;
-      cardImage2El.classList.remove("fade-out");
-      cardImage2El.style.opacity = 0;
-      setTimeout(function () {
-        cardImage2El.style.opacity = 1;
-      }, 10);
-    }, 1000);
-  } else if (drawNum === 2) {
-    isUpright = coinFlip();
-    cardImage3El.classList.add("fade-out");
-    setTimeout(function () {
-        console.log(isUpright);
-        if (isUpright === "reversed") {
-            cardImage3El.classList.add('reversed');
-        }
-        else if (isUpright === "upright") {
-            cardImage3El.classList.remove('reversed');
-        }
-      cardImage3El.src = Deck[2].cardImage;
-      cardImage3El.classList.remove("fade-out");
-      cardImage3El.style.opacity = 0;
-      setTimeout(function () {
-        cardImage3El.style.opacity = 1;
-      }, 10);
-    }, 1000);
-  }
-};
+}
 
 // This function allows the fade in to work after the first time it's called
 const clearCards = () => {
@@ -299,7 +259,6 @@ button1El.addEventListener("click", function () {
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //TODO
-// Add a coin flip that will determine if the card was drawn reversed or upright
 // Add some text for each inversion
 // Add chords for reversed
 // Add a weight to each card and inversion to be used to change color theme of page
