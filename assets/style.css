@@ -31,14 +31,15 @@ button:hover {
     border: 2px, black, solid;
     margin: 20px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: blue;
 }
 
 .card img {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 80%;
+    max-height: 80%;
     object-fit: contain;
     transition: opacity 1s ease-in-out; 
 }
@@ -49,7 +50,11 @@ button:hover {
 
 .card img.fade-out {
     opacity: 0;
-  }
+}
+
+.card title {
+    position: relative;
+}
 
   @media (max-width: 768px) {
     #cardContainer {
