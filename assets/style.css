@@ -43,6 +43,10 @@ button:hover {
     transition: opacity 1s ease-in-out; 
 }
 
+.card img.reversed {
+    transform: rotate(180deg);
+}
+
 .card img.fade-out {
     opacity: 0;
   }
